@@ -25,6 +25,7 @@ Please find the sectional links for the project below:
   - [Phase 5. Data Export for Task 1 & 2](#5-data-export-for-task-1--2)
   - [Phase 6. Data Transformation for Task 3](#6-data-transformation-for-task-3)
   - [Phase 7. Data Export for Task 3](#7-data-export-for-task-3)
+- [Data Outputs](#data-outputs)
 
 ---
 
@@ -207,5 +208,10 @@ After all the above transformations the data is now ready to be pushed into our 
 - So normally we should write to a database but since that is not available, I'll just write to an Excel file using a Output Data tool and it will output in the same directory I've saved this particular workflow inside the Data Outputs folder and the file name will be Output - CUSTOMERS.xlsx. Rerun the workflow to export the file. In configuration window, set Output Options to Overwrite the file with each rerun.
 - Open the Excel file and cross verify if all the columns have been exported correctly. Encase the above tool in a Tool Container titled ‘Task 3: DATA OUTPUT’.
 - Clear Cached Input Data before making final Customers Data Export.
+
+---
+
+## Data Outputs:
+[Link to Data Outputs](https://github.com/5ifar/WholesaleStore_Order_Data_Transformation/blob/main/Data%20%26%20Workflow%20Files/Links.md)
 
 ---
