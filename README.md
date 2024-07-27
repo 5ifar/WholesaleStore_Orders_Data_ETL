@@ -9,6 +9,17 @@ The project raw data source and data output files have not been uploaded to this
 
 ---
 
+## Contents:
+Please find the resource links for the project below:
+- [Project Objective](#project-objective)
+- [Tools used & Methodologies implemented](#tools-used)
+- [About the Dataset](#about-the-dataset)
+  - [Data Sources](#data-sources)
+  - [Data Dictionary](#data-dictionary)
+  - [Data Integrity](#data-integrity)
+
+---
+
 ## Project Objective:
 You’re working as an analyst for a wholesale organization i.e a company selling goods to retailers and maintain their order data and customer data in data warehouse. You need to process order data from a Point of Sale (POS) system, as well as an export from the Order Returns department, and update the Orders and Customers table in the data warehouse. Each order placed in the POS system captures the customer details, the product details, price and quantity. Every month this data needs to be moved to a data warehouse where it is stored for long-term use and is used for reporting purposes.
 
@@ -22,15 +33,6 @@ We need to create a workflow to take the data from the POS system for August 202
     - Note that the POS system has the US State name in full. Ensure you change that to the State code prior to loading it into the Data Warehouse Customers table.
 
 Note that we refer to data warehouse tables as orders and customer tables in this project, which would typically be database tables. But since we may not have access to a database for this project, we'll use Excel and CSV files instead.
-
-## Contents:
-Please find the resource links for the project below:
-- [Project Objective](#project-objective)
-- [Tools used & Methodologies implemented](#tools-used)
-- [About the Dataset](#about-the-dataset)
-  - [Data Sources](#data-sources)
-  - [Data Dictionary](#data-dictionary)
-  - [Data Integrity](#data-integrity)
 
 ## Tools used:
 1. Alteryx Designer- for Data Import, Data Cleaning, Data Transformation and Data Export process
