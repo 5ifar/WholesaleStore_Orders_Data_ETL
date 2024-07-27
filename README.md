@@ -17,6 +17,14 @@ Please find the sectional links for the project below:
   - [Data Sources](#data-sources)
   - [Data Dictionary](#data-dictionary)
   - [Data Integrity](#data-integrity)
+- [Project Implementation](#-project-implementation)
+  - [Phase 1. Configuring the Inputs](#1-configuring-the-inputs)
+  - [Phase 2. Preview the loaded Input data](#2-preview-the-loaded-input-data)
+  - [Phase 3. Data Validation](#3-data-validation)
+  - [Phase 4. Data Transformation for Task 1 & 2](#4-data-transformation-for-task-1--2)
+  - [Phase 5. Data Export for Task 1 & 2](#5-data-export-for-task-1--2)
+  - [Phase 6. Data Transformation for Task 3](#6-data-transformation-for-task-3)
+  - [Phase 7. Data Export for Task 3](#7-data-export-for-task-3)
 
 ---
 
@@ -24,7 +32,6 @@ Please find the sectional links for the project below:
 You’re working as an analyst for a wholesale organization i.e a company selling goods to retailers and maintain their order data and customer data in data warehouse. You need to process order data from a Point of Sale (POS) system, as well as an export from the Order Returns department, and update the Orders and Customers table in the data warehouse. Each order placed in the POS system captures the customer details, the product details, price and quantity. Every month this data needs to be moved to a data warehouse where it is stored for long-term use and is used for reporting purposes.
 
 ### Assignment:
-
 1. Update the Existing Data Warehouse Orders table with the latest POS orders, placed in August 2021.
 We need to create a workflow to take the data from the POS system for August 2021 and move it into the existing order table in the data warehouse. Since data for the previous periods already exists in this destination, we need to add these new records to the existing data.
 2. Update the POS and Existing Data Warehouse Orders table with the returns information i.e set the RETURNED column to the right value.
@@ -134,7 +141,7 @@ ROCCC Evaluation:
 
 ---
 
-## Project Implementation:
+## 🧬 Project Implementation:
 
 ### 1. Configuring the Inputs:
 
