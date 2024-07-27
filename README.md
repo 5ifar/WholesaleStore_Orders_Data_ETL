@@ -27,6 +27,10 @@ Note that we refer to data warehouse tables as orders and customer tables in thi
 Please find the resource links for the project below:
 - [Project Objective](#project-objective)
 - [Tools used & Methodologies implemented](#tools-used)
+- [About the Dataset](#about-the-dataset)
+  - [Data Sources](#data-sources)
+  - [Data Dictionary](#data-dictionary)
+  - [Data Integrity](#data-integrity)
 
 ## Tools used:
 1. Alteryx Designer- for Data Import, Data Cleaning, Data Transformation and Data Export process
@@ -40,3 +44,93 @@ Please find the resource links for the project below:
 5. Documentation
 
 ---
+
+## About the Dataset:
+
+### Data Sources:
+1. Data Warehouse - ORDERS: (File: Orders Table.xlsx) This is the existing ORDERS table in the data warehouse. It contains all orders placed prior to August 2021.
+2. Data Warehouse - CUSTOMERS: (File: CUSTOMERS.xlsx) This is the existing CUSTOMERS table in the data warehouse. It contains details for each customer.
+3. POS Orders Data: (File: STORE_TRANSACTIONS_ALL_AUG_2021.csv) This is the Point of Sale (POS) data from August 2021
+4. Returns: (File: Completed Returns - August 2021.xlsx) These are returns received in August 2021 (Order could be placed prior or during August 2021)
+5. US State Codes Reference List: (File: Text Input) This static lookup list maps US state names to US State codes.
+
+### Data Dictionary:
+**1. Orders Table.xlsx: 482793 records | 10 fields**
+
+|Column name|Data type|Description|
+|-|-|-|
+|ORDER_ID|V_String|Unique Order Id number|
+|PRODUCT_SKU|V_String|Unique Product SKU (Stock Keeping Unit) number|
+|QUANTITY|Double|Quantity of product ordered|
+|ORDER_DATE|DateTime|Date the order was placed|
+|CUSTOMER_ID|Double|Unique Customer Id number|
+|RETURNED|Bool|Order Return Status|
+|PRODUCT_NAME|V_String|Name of product|
+|PRODUCT_DESC|V_String|Description of product|
+|PRODUCT_PRICE|Double|Price of product|
+|PRODUCT_CATEGORY|V_String|Category of product|
+
+**2. CUSTOMERS.xlsx: 985857 records | 10 fields**
+
+|Column name|Data type|Description|
+|-|-|-|
+|ID|Double|Unique Customer Id number|
+|FirstName|V_String|First Name of customer|
+|LastName|V_String|Last Name of customer|
+|UserName|V_String|User Name of customer|
+|Email|V_String|Email of customer|
+|State|V_String|State of customer|
+|City|V_String|City of customer|
+|Street|V_String|Street of customer|
+|PostCode|V_String|Postal Code of customer|
+|Phone|V_String|Mobile number of customer|
+
+**3. STORE_TRANSACTIONS_ALL_AUG_2021.csv: 67792 records | 18 fields**
+
+|Column name|Data type|Description|
+|-|-|-|
+|ORDER_ID|V_String|Unique Order Id number|
+|PRODUCT_SKU|V_String|Unique Product SKU (Stock Keeping Unit) number|
+|QUANTITY|V_String|Quantity of product ordered|
+|ORDER_DATE|V_String|Date the order was placed|
+|CUSTOMER_ID|V_String|Unique Customer Id number|
+|PRODUCT_NAME|V_String|Name of product|
+|PRODUCT_DESC|V_String|Description of product|
+|PRODUCT_PRICE|V_String|Price of product|
+|PRODUCT_CATEGORY|V_String|Category of product|
+|FirstName|V_String|First Name of customer|
+|LastName|V_String|Last Name of customer|
+|UserName|V_String|User Name of customer|
+|Email|V_String|Email of customer|
+|State|V_String|State of customer|
+|City|V_String|City of customer|
+|Street|V_String|Street of customer|
+|PostCode|V_String|Postal Code of customer|
+|Phone|V_String|Mobile number of customer|
+
+**4. Completed Returns - August 2021.xlsx: 718 records | 2 fields**
+
+|Column name|Data type|Description|
+|-|-|-|
+|ORDER_ID|V_String|Unique Order ID number|
+|RETURNED|Bool|Order Return Status|
+
+**5. US State Codes Text Input: 55 records | 2 fields**
+
+|Column name|Data type|Description|
+|-|-|-|
+|State*|V_String|Name of State|
+|State_Abbreviated|V_String|Abbreviation Code of State|
+
+## Data Integrity:
+ROCCC Evaluation:
+- Reliability: MED - The raw dataset is created and updated by Hendrik Kleine (Udemy Instructor). It has total 4 files. All of them were utilized in the analysis.
+- Originality: HIGH - First party provider (Hendrik Kleine, Udemy)
+- Comprehensiveness: HIGH - Total 4 Files with a total of around 1.5 Million records were provided. Dataset contains multiple dimension parameters for Customers as well as comprehensive Order transaction data.
+- Current: LOW - Dataset contains 2021 data i.e almost 3 years old. So its not very relevant. Any trends observed and insights gained need to be comprehended as a general (not yearly) trend.
+- Citation: LOW - No official citation/reference available.
+
+---
+
+
+
