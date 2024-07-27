@@ -17,7 +17,7 @@ Please find the sectional links for the project below:
   - [Data Sources](#data-sources)
   - [Data Dictionary](#data-dictionary)
   - [Data Integrity](#data-integrity)
-- [Project Implementation](#-project-implementation)
+- [Project Implementation](#project-implementation)
   - [Phase 1. Configuring the Inputs](#1-configuring-the-inputs)
   - [Phase 2. Preview the loaded Input data](#2-preview-the-loaded-input-data)
   - [Phase 3. Data Validation](#3-data-validation)
