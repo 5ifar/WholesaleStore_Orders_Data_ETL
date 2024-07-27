@@ -142,7 +142,7 @@ ROCCC Evaluation:
 
 ---
 
-## 🧬 Project Implementation:
+## Project Implementation:
 
 ### 1. Configuring the Inputs:
 
