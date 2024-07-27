@@ -173,3 +173,32 @@ Add a ‘Remove Customer detail fields’ annotation to this Select tool.
 - Now I want to combine all the outputs using the Union tool to make it one data set again. Set the Join tool L Output connection line label to ‘Prior August Orders - Not Returned’. Set the Join tool J Output before the Select tool connection line label to ‘Prior August Orders - August Returned’. Annotate Union tool as ‘Union: Prior August Orders’.
 - So now I have four data flows: 1. Orders placed prior to August but not returned in August, 2. Orders placed prior to August and returned in August, 3. Orders placed in August and not returned, 4. Orders placed in August and returned. I will combine all of these different flows into one using another Union tool. Annotate Union tool as ‘Union: All Orders’.
 - Encase all the above tools in a Tool Container titled ‘Task 1 & 2: Update Existing & New Orders with Return Indicator - DATA TRANSFORMATION’.
+
+### 5. Data Export for Task 1 & 2:
+After all the above transformations the data is now ready to be pushed into our data warehouse into the Orders table.
+
+- So normally we should write to a database but since that is not available, I'll just write to an Excel file using a Output Data tool and it will output in the same directory I've saved this particular workflow inside the Data Outputs folder and the file name will be Output - ORDERS.xlsx. Rerun the workflow to export the file. In configuration window, set Output Options to Overwrite the file with each rerun.
+- Open the Excel file and cross verify if all the columns have been exported correctly. Encase the above tool in a Tool Container titled ‘Task 1 & 2: DATA OUTPUT’.
+- Clear Cached Input Data before making final Orders Data Export.
+
+### 6. Data Transformation for Task 3:
+In this case I need to do the opposite to Task 1 & 2, I have to drop the orders details which is not relevant instead of customer details.
+
+- There are a lot of product information fields in the POS Orders table that are not present in the Existing Customers table. So I'll remove them from the POS Orders dataset as well since I’ll not be needing it using an additional Select tool and unchecking all of the product detail fields except of course CUSTOMER_ID and other customer detail fields. Also rename the CUSTOMER_ID field as ID so its consistent with the Existing Customers table.
+Add a ‘Remove Order detail fields’ annotation to this Select tool.
+- I’ll also replace the State field with State codes from the Text Input to match consistency with the Existing Customers table using the Find & Replace tool. Connect the Select tool above with the F Find Input anchor and the State Code Text Input with the R Replace Input anchor. In the configuration window, I want to match an entire field that is the state in our matching data set, I want to find the State value as well and if I find state in our POS data, I want to replace the found text with the State_Abbreviated column from the reference file. Rerun the workflow to replace the values. Annotate Find & Replace tool as ‘Replace by State Code’.
+- We want the Data Warehouse to be updated with the most recent customer details. To achieve this I need to join both the Customers from August POS Orders and Existing Customers using a Join tool. Connect the Find & Replace tool above output to the L Left input anchor and Existing Customers input to the R Right input anchor of the Join tool. Label the Left input anchor connecting line as ‘August Customers’ and the Right input anchor connecting line as ‘Existing Customers’.
+- Join based on the ID field. Rerun the workflow. On the L Left Join output I get no results which makes sense because a customer has to be registered in order to place an order. So if that wasn't the case, new customers who placed an order for the first time in August would appear here. In the J Join output I have customers that have placed an order in August as well as before August. So an existing customer placing an order in August. In the R Right Join output are existing customers who did not place an order in August.
+- All the extra duplicate fields on the end that the Join output brought in with prefix ‘Right_’, are populated with the old customer data that now needs to be updated in the Existing Customers table. For this we’ll uncheck all of these fields with a ‘Right_’ prefix since they are old details coming in from Existing Customers table and are no longer relevant as we have new customer details data coming from the POS Orders table. Rerun the workflow.
+- We’ll combine all the customers from the J Join and Right Join outputs together using a Union tool. Label the connecting line from the J Join as ‘Updated Customer details’ and from the Right Join as ‘Unchanged Customer details’. Rerun the workflow. Annotate Union tool as ‘Union: All Customers’.
+- However since no new customers were introduced. The customer count in Existing Customers table 985,857 should be same as that after the Union of all customers which comes out to be 1,046,050. This indicates the presence of duplicates in the POS Orders dataset. This anomaly is happening since POS Orders has multiple records for the same customer for different orders. This can be fixed by adding a Unique tool to filter based on unique ID field went we introduce the POS Orders data input before the Find & Replace tool. Rerun the workflow. Now the Union tools outputs the correct 985,857 unique customers. Annotate Unique tool as ‘Unique: ID’.
+- Encase all the above tools in a Tool Container titled ‘Task 3: Update Customer Details - DATA TRANSFORMATION’.
+
+### 7. Data Export for Task 3:
+After all the above transformations the data is now ready to be pushed into our data warehouse into the Customers table.
+
+- So normally we should write to a database but since that is not available, I'll just write to an Excel file using a Output Data tool and it will output in the same directory I've saved this particular workflow inside the Data Outputs folder and the file name will be Output - CUSTOMERS.xlsx. Rerun the workflow to export the file. In configuration window, set Output Options to Overwrite the file with each rerun.
+- Open the Excel file and cross verify if all the columns have been exported correctly. Encase the above tool in a Tool Container titled ‘Task 3: DATA OUTPUT’.
+- Clear Cached Input Data before making final Customers Data Export.
+
+---
