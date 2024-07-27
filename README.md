@@ -1,4 +1,7 @@
 # <img src="https://cdn-icons-png.flaticon.com/512/353/353288.png" width="5%" height="5%"> Wholesale Store: Order Data Transformation
+
+<div align="center"> <img src="https://github.com/5ifar/WholesaleStore_Order_Data_Transformation/blob/main/Assets/Wholesale%20Store%20Order%20Data%20Transformation%20Project%20Thumbnail%2BIcon.png" width="100%" height="100%"> </div>
+
 This repository serves as my documentation for the WholesaleStore: Order Data Transformation - Alteryx Project.
 
 It showcases my competancy to work with ALteryx Designer and demonstrates my proficiency in essential tools like **In/Out Tools (Browse, Input Data, Output Data & Text Input), Preparation Tools (Select, Filter, Formula, Sort & Unique), Join Tools (Join, Find Replace & Union) and Documentation Tools (Comment & Tool Container)**.
