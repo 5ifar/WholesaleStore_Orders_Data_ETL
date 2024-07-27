@@ -10,7 +10,7 @@ The project raw data source and data output files have not been uploaded to this
 ---
 
 ## Contents:
-Please find the resource links for the project below:
+Please find the sectional links for the project below:
 - [Project Objective](#project-objective)
 - [Tools used & Methodologies implemented](#tools-used)
 - [About the Dataset](#about-the-dataset)
