@@ -134,5 +134,31 @@ ROCCC Evaluation:
 
 ---
 
+## Project Implementation:
+
+### 1. Configuring the Inputs:
+
+- Imported the data from the 4 Excel file data sources - Orders, Customers, POS Orders and Returns using the Input Data tool.
+- Imported the data for the US State Codes using the Text Input Tool and entering the data: 1. Alabama	AL, 2. Alaska	AK, 3. Arizona	AZ, 4. Arkansas	AR, 5. California	CA, 6. Colorado	CO, 7. Connecticut	CT, 8. Delaware	DE, 9. Florida	FL, 10. Georgia	GA, 11. Hawaii	HI, 12. Idaho	ID, 13. Illinois	IL, 14. Indiana	IN, 15. Iowa	IA, 16. Kansas	KS, 17. Kentucky	KY, 18. Louisiana	LA, 19. Maine	ME, 20. Maryland	MD, 21. Massachusetts	MA, 22. Michigan	MI, 23. Minnesota	MN, 24. Mississippi	MS, 25. Missouri	MO, 26. Montana	MT, 27. Nebraska	NE, 28. Nevada	NV, 29. New Hampshire	NH, 30. New Jersey	NJ, 31. New Mexico	NM, 32. New York	NY, 33. North Carolina	NC, 34. North Dakota	ND, 35. Ohio	OH, 36. Oklahoma	OK, 37. Oregon	OR, 38. Pennsylvania	PA, 39. Rhode Island	RI, 40. South Carolina	SC, 41. South Dakota	SD, 42. Tennessee	TN, 43. Texas	TX, 44. Utah	UT, 45. Vermont	VT, 46. Virginia	VA, 47. Washington	WA, 48. West Virginia	WV, 49. Wisconsin	WI, 50. Wyoming	WY, 51. American Samoa	AS, 52. Guam	GU, 53. Northern Mariana Islands	MP, 54. Puerto Rico	PR, 55. Virgin Islands	VI
+- Encased all the above 5 data sources in individual Tool Containers titled: Data Warehouse - ORDERS, Data Warehouse - CUSTOMERS, POS Orders Data, Returns and US State Codes Reference List respectively and added descriptive comments. Added a master Tool Container for all data sources titled ‘DATA INPUTS’.
+- Since many of these inputs have almost a million records, I'd like to cache all of these inputs since I will want to be able to run this workflow a number of times just for testing purposes. This will have to be done one by one. So I'll just right click any one of the input tools and then click cache and run workflow, but to prevent running the other inputs as well I will disable the tool containers for other inputs so that not all inputs will run. I can leave the last text input enabled since it is a manual data input and that's really not going to slow down my workflow. So I'll leave that enabled. Cached inputs will be denoted by  a blue bubble. Repeat for all the other inputs.
+
+### 2. Preview the loaded Input data:
+
+- The existing Orders table has an ORDER_ID field which is presumably the Primary Key. It also has other fields for product information like product_sku, quantity, order_date, customer_id, returned, product_name, product_desc, product_price and product_category.
+- The Point of Sale (POS) orders data are the new orders that have been placed in August. They also have an ORDER_ID as well as presumably the Primary Key, and the order date should all be August. The rest of the columns seem to be the same with the addition of some customer columns that I didn't see in the data warehouse orders table, which makes sense because in the data warehouse the data there is split into different tables. So there's a separate table with customer info.
+- The Returns is a simple data set where we can see here the ORDER_ID field and then whether that order was returned or not. These are all returns received in August 2021 and the order could have been placed before August 2021.
+- The existing Customers table has an ID field which is presumably the Primary Key. It also has other fields for customer information like FirstName, LastName, UserName, Email, State, City, Street, PostCode and Phone.
+
+### 3. Data Validation:
+Add a select tool to all the input tools to validate the datatypes and field name and to make changes if necessary.
+
+- For Existing Orders table, change the CUSTOMER_ID field datatype to V_String similar to the ORDER_ID field. All other fields were validated correctly.
+- For POS Orders table, change the QUANTITY field datatype to Double, ORDER_DATE field datatype to DateTime and PRODUCT_PRICE field datatype to Double. All other fields were validated correctly.
+- For Existing Customers table, change the ID field datatype to V_String. All other fields were validated correctly.
+- For Returns table, all fields were validated correctly.
+- Add a ‘Fix data types’ annotation to all the Select tools used for the above validations.
+- Encase all the above select tools in a Tool Container titled ‘DATA VALIDATION’.
+
 
 
