@@ -4,7 +4,7 @@
 
 This repository serves as my documentation for the WholesaleStore: Order Data Transformation - Alteryx Project.
 
-It showcases my competancy to work with ALteryx Designer and demonstrates my proficiency in essential tools like **In/Out Tools (Browse, Input Data, Output Data & Text Input), Preparation Tools (Select, Filter, Formula, Sort & Unique), Join Tools (Join, Find Replace & Union) and Documentation Tools (Comment & Tool Container)**.
+It showcases my competancy to work with Alteryx Designer and demonstrates my proficiency in essential tools like **In/Out Tools (Browse, Input Data, Output Data & Text Input), Preparation Tools (Select, Filter, Formula, Sort & Unique), Join Tools (Join, Find Replace & Union) and Documentation Tools (Comment & Tool Container)**.
 
 The entire project has been implemented using Alteryx Designer 2024.1 (User) (with AMP Engine enabled).
 
@@ -47,7 +47,7 @@ We need to create a workflow to take the data from the POS system for August 202
 Note that we refer to data warehouse tables as orders and customer tables in this project, which would typically be database tables. But since we may not have access to a database for this project, we'll use Excel and CSV files instead.
 
 ## Tools used:
-1. Alteryx Designer- for Data Import, Data Cleaning, Data Transformation and Data Export process
+1. Alteryx Designer- for ETL (Data Import, Data Cleaning, Data Transformation and Data Export) process
 2. GitHub - for documentation
 
 ## Skills & Methodologies implemented:
