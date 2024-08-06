@@ -1,6 +1,6 @@
 # <img src="https://cdn-icons-png.flaticon.com/512/353/353288.png" width="5%" height="5%"> Wholesale Store: Orders Data ETL
 
-<div align="center"> <img src="https://github.com/5ifar/WholesaleStore_Order_Data_Transformation/blob/main/Assets/Wholesale%20Store%20Order%20Data%20Transformation%20Project%20Thumbnail%2BIcon.png" width="100%" height="100%"> </div>
+<div align="center"> <img src="https://github.com/5ifar/WholesaleStore_Orders_Data_ETL/blob/main/Assets/Wholesale%20Store%20Orders%20Data%20ETL%20Project%20Thumbnail%2BIcon.png" width="100%" height="100%"> </div>
 
 This repository serves as my documentation for the WholesaleStore: Order Data Transformation - Alteryx Project.
 
