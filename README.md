@@ -68,6 +68,8 @@ Note that we refer to data warehouse tables as orders and customer tables in thi
 4. Returns: (File: Completed Returns - August 2021.xlsx) These are returns received in August 2021 (Order could be placed prior or during August 2021)
 5. US State Codes Reference List: (File: Text Input) This static lookup list maps US state names to US State codes.
 
+[Link to Data Sources](https://github.com/5ifar/WholesaleStore_Order_Data_Transformation/blob/main/Data%20%26%20Workflow%20Files/Links.md)
+
 ### Data Dictionary:
 **1. Orders Table.xlsx: 482793 records | 10 fields**
 
