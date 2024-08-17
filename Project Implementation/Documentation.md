@@ -2,14 +2,14 @@
 
 ---
 
-## Phases of Implementation
-- [Phase 1. Configuring the Inputs](#1-configuring-the-inputs)
-- [Phase 2. Preview the loaded Input data](#2-preview-the-loaded-input-data)
-- [Phase 3. Data Validation](#3-data-validation)
-- [Phase 4. Data Transformation for Task 1 & 2](#4-data-transformation-for-task-1--2)
-- [Phase 5. Data Export for Task 1 & 2](#5-data-export-for-task-1--2)
-- [Phase 6. Data Transformation for Task 3](#6-data-transformation-for-task-3)
-- [Phase 7. Data Export for Task 3](#7-data-export-for-task-3)
+## Implementation Steps
+- [1. Configuring the Inputs](#1-configuring-the-inputs)
+- [2. Preview the loaded Input data](#2-preview-the-loaded-input-data)
+- [3. Data Validation](#3-data-validation)
+- [4. Data Transformation for Task 1 & 2](#4-data-transformation-for-task-1--2)
+- [5. Data Export for Task 1 & 2](#5-data-export-for-task-1--2)
+- [6. Data Transformation for Task 3](#6-data-transformation-for-task-3)
+- [7. Data Export for Task 3](#7-data-export-for-task-3)
 
 ---
 
