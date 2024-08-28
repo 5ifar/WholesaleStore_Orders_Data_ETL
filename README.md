@@ -4,8 +4,6 @@
 
 This repository serves as my documentation for the WholesaleStore: Order Data Transformation - Alteryx Project.
 
-It showcases my competancy to work with Alteryx Designer and demonstrates my proficiency in essential tools like **In/Out Tools (Browse, Input Data, Output Data & Text Input), Preparation Tools (Select, Filter, Formula, Sort & Unique), Join Tools (Join, Find Replace & Union) and Documentation Tools (Comment & Tool Container)**.
-
 The entire project has been implemented using Alteryx Designer 2024.1 (User) (with AMP Engine enabled).
 
 The project raw data source and data output files have not been uploaded to this repository due to size restrictions, but they can be accessed thorugh the Project Workflow Package that has been uploaded.
@@ -44,11 +42,11 @@ Note that we refer to data warehouse tables as orders and customer tables in thi
 2. GitHub - for documentation
 
 ## Skills & Methodologies implemented:
-1. Data Import - Input Data Tool & Text Imput Tool
-2. Data Validation - Select Tool
-3. Data Transformation - Join Tool, Find Replace Tool, Unique Tool, Formula Tool & Union Tool
-4. Data Export - Output Data Tool
-5. Documentation
+1. Data Import - **Input Data Tool & Text Imput Tool**
+2. Data Validation - **Select Tool, Browse Tool**
+3. Data Transformation - **Filter Tool, Join Tool, Find Replace Tool, Unique Tool, Formula Tool & Union Tool**
+4. Data Export - **Output Data Tool**
+5. Documentation - **Comment Tool, Tool Container Tool**
 
 ---
 
